@@ -1,0 +1,459 @@
+29 décembre 2019	JOURNAL  OFFICIEL  DE  LA  RÉPUBLIQUE  FRANÇAISE	Texte 39 sur 171
+
+
+Décrets, arrêtés, circulaires
+
+TEXTES GÉNÉRAUX
+
+MINISTÈRE DE L’ÉCONOMIE ET DES FINANCES
+
+Arrêté du 27 décembre 2019 définissant les caractéristiques techniques des dispositifs 
+de signalement électronique et lumineux des aéronefs circulant sans personne à bord
+NOR : ECOI1934044A
+
+  La ministre de la transition écologique et solidaire, le ministre de l’intérieur, la ministre des outre-mer, le 
+secrétaire d'Etat auprès de la ministre de la transition écologique et solidaire, chargé des transports, et la secrétaire 
+d’Etat auprès du ministre de l’économie et des finances,
+  Vu la directive (UE) 2015/1535 du Parlement européen et du Conseil du 9 septembre 2015, prévoyant une 
+procédure d’information dans le domaine des réglementations techniques et des règles relatives aux services de la 
+société de l’information (texte codifié), et notamment la notification no 2018/170/F ;
+Vu le code de l’aviation civile et notamment son article R. 114-2 ;
+Vu le code des postes et des communications électroniques et notamment ses articles L. 34-9-2 et R. 20-29-4 ; 
+Vu l’avis no  2019-0418 de l’Autorité de régulation des communications électroniques et des postes du
+26 mars 2019,
+Arrêtent :
+CHAPITRE 1er
+DISPOSITIONS RELATIVES AU DISPOSITIF DE SIGNALEMENT ÉLECTRONIQUE OU NUMÉRIQUE
+  Art. 1er. – I. – Le dispositif de signalement électronique ou numérique mentionné à l’alinéa premier de 
+l’article L. 34-9-2 et à l’article R. 20-29-2 du code des postes et des communications électroniques peut être intégré 
+ou non intégré à l’aéronef circulant sans personne à bord.
+  Un dispositif de signalement électronique ou numérique non intégré peut être utilisé sur plusieurs aéronefs 
+circulant sans personne à bord appartenant au même groupe de signalement électronique listé en annexe, de plage 
+de masse identique et appartenant à un même propriétaire.
+  II. – Le dispositif de signalement électronique ou numérique mentionné à l’alinéa premier de l’article L. 34-9-2 
+et à l’article R. 20-29-2 du code des postes et des communications électroniques est programmé au cours de sa 
+production et ne dispose d’aucune possibilité de modification de ses réglages par un tiers pour les champs identifiés 
+comme obligatoires dans le présent arrêté.
+  Art. 2. – I. – La transmission des données mentionnées à l’article R. 20-29-2 du code des postes et des 
+communications électroniques présente les caractéristiques suivantes :
+1o Le message de signalement est constitué d’une trame wifi unique ; 
+2o Le message de signalement n’est pas chiffré ;
+  3o La référence du système géodésique est EPSG 4326. Les coordonnées sont transmises en “degrés/décimales 
+de degrés” :
+–	les latitudes transmises sont incluses dans l’intervalle [- 90o ; + 90o]
+–	les longitudes transmises sont incluses dans l’intervalle]- 180o (exclus) ; + 180o (inclus)]. 
+4o La route transmise, route vraie, prend comme référence le nord géographique ;
+5o Les données sont transmises en unités respectant le Système International :
+–	vitesse en mètres par seconde,
+–	position verticale en mètres.
+6o Le système de codage de transmission est UTF-8 ;
+  7o Les données sont transmises en utilisant le mécanisme TLV (Type Length Value) et correspondent aux types 
+définis dans le tableau des types porté en annexe du présent arrêté.
+8o La base temporelle est UTC+00/00 ;
+
+
+29 décembre 2019	JOURNAL  OFFICIEL  DE  LA  RÉPUBLIQUE  FRANÇAISE	Texte 39 sur 171
+
+  9o L’émission du message de signalement s’effectue dès le décollage de l’aéronef circulant sans personne à bord 
+jusqu’à l’atterrissage de celui-ci et de manière périodique selon l’un ou l’autre des deux processus suivants :
+–	soit sur un canal Wifi quelconque de la bande 2400 à 2483,5 Mhz et conformément au standard d’émission 
+des trames beacon tel que défini par le standard IEEE 802.11 (100 TU), à la condition que le système de 
+signalement soit natif de l’aéronef circulant sans personne à bord et soit coordonné avec le système de 
+commande et de contrôle de ce dernier ;
+–	soit sur le canal Wifi numéro 6 au premier des termes temporels ou spatiaux échus suivants :
+–	2 envois sont séparés d’au plus 3 secondes ;
+–	2 envois sont séparés d’au plus 30 mètres.
+  10o La puissance d’émission du dispositif de signalement électronique ou numérique mentionné à l’alinéa 
+premier de l’article L. 34-9-2 et à l’article R. 20-29-2 du code des postes et des communications électroniques 
+respecte les conditions techniques d’utilisation de la fréquence fixées par l’autorité de régulation des 
+communications électroniques et des postes selon les dispositions prévues par les articles L. 33-3, L. 36-6 et
+L. 42 du code des postes et des communications électroniques.
+  11o La puissance d’émission du dispositif de signalement électronique ou numérique mentionné à l’alinéa 
+premier de l’article L. 34-9-2 et à l’article R. 20-29-2 du code des postes et des communications électroniques 
+correspond au maximum de la puissance autorisée par décision de l’autorité de régulation des communications 
+électroniques et des postes pour la bande 2400 à 2483,5 Mhz.
+  12o Le dispositif de signalement électronique ou numérique mentionné à l’alinéa premier de l’article L. 34-9-2 et 
+à l’article R. 20-29-2 du code des postes et des communications électroniques émet le signal de manière 
+omnidirectionnelle.
+  II. – Le format de transmission des données mentionnées à l’article R. 20-29-4 du code des postes et des 
+communications électroniques est conforme aux spécifications suivantes :
+  1o Le protocole de transmission est conforme à la norme IEEE 802.11 [dans la version publiée à la date de 
+parution du présent arrêté (IEEE 802.11-2016).]
+a)	La trame Wifi 802.11 est de type 0 (paquet de gestion) et de sous-type 8 ;
+  b)	La bande de fréquence utilisée est la bande Wifi 2400 à 2483,5 Mhz. Les canaux Wifi utilisés sont ceux en 
+vigueur en France ; la largeur de ces canaux est de 20 Mhz. Une largeur de canal de 5 ou 10 Mhz est admise dans le 
+cadre d’une émission conforme au standard d’émission des trames beacon tel que défini par le standard IEEE
+802.11 (100 TU) à la condition que le principe de modulation reste celui de l’OFDM et que la division de la largeur 
+du canal (initialement 20 Mhz) ne soit due qu’à la division de la clock respectivement par 4 (cas de la largeur de 
+canal de 5 Mhz) ou 2 (cas de la largeur de canal de 10 Mhz) ;
+c)	Le message de signalement prend place dans la partie charge utile (payload – vendor specific) de la trame Wifi
+802.11 décrite en annexe. Le message correspond à une trame Wifi 802.11 transitant sur un réseau sans fil. Le 
+numéro CID suivant est utilisé : 6A-5C-35.
+2 o Le format de la charge utile est défini comme suit et respecte l’ordre fixé :
+  a)	Le numéro de version de protocole codé sur 1 octet et correspondant au type 01 du tableau des types porté en 
+annexe. Pour l’application des exigences du présent arrêté, sa valeur est fixée à 1.
+  b)	L’identifiant unique de l’aéronef sans personne à bord, établi conformément à l’une ou l’autre des deux 
+possibilités décrites ci-dessous, l’utilisation de la norme ANSI/CTA/2063 (numéro de série physique – PSN) pour 
+définir l’identifiant de l’aéronef sans personne à bord étant réputée satisfaire aux exigences du présent arrêté :
+  i.	soit un identifiant unique codé sur 30 octets et correspondant au type 02 du tableau des types porté en annexe, 
+composé des trois champs suivants :
+–	le trigramme constructeur est codé sur 3 octets ;
+–	le modèle de l’aéronef (pour un aéronef circulant sans personne à bord comportant un système de signalement 
+électronique ou numérique intégré) ou le modèle du dispositif de signalement électronique ou numérique 
+(pour un système de signalement électronique ou numérique non intégré) codé sur 3 octets ;
+–	le numéro de série de l’aéronef (pour un aéronef circulant sans personne à bord comportant un système de 
+signalement électronique ou numérique intégré) ou le numéro de série du dispositif de signalement 
+électronique ou numérique (pour un système de signalement électronique ou numérique non intégré) codé sur 
+24 octets. Dans le cas où le numéro de série comporte moins de 24 caractères, des 0 seront ajoutés en amont 
+de celui-ci ;
+  Cet identifiant unique ne doit comporter aucun signe espace. En outre, l’unicité de cet identifiant ne pourra être 
+obtenue en prenant en compte la sensibilité à la casse pour discriminer deux identifiants uniques différents.
+  ii.	soit un identifiant unique conforme à la norme ANSI/CTA/2063 (numéro de série physique – PSN) et 
+correspondant au type 03 du tableau des types porté en annexe.
+  c)	La position de l’aéronef sans personne à bord au moment de l’envoi du message codée sur 10 octets, 
+composée des champs suivants :
+  i.	latitude codée sur 4 octets correspondant au type 04 du tableau des types porté en annexe ; l’information est 
+codée selon les méthodes de calcul indiquées en annexe ;
+  
+
+29 décembre 2019	JOURNAL  OFFICIEL  DE  LA  RÉPUBLIQUE  FRANÇAISE	Texte 39 sur 171
+
+  ii.	longitude codée sur 4 octets correspondant au type 05 du tableau des types porté en annexe ; l’information est 
+codée selon les méthodes de calcul indiquées en annexe ;
+  iii.	la position verticale de l’aéronef circulant sans personne à bord, codée sur 2 octets et signée selon les 
+méthodes de calcul indiquées en annexe, est exprimée en mètres et correspond à l’une ou l’autre des deux 
+informations ci-dessous :
+–	soit son altitude au-dessus du niveau moyen de la mer, altitude absolue, correspondant au type 06 du tableau 
+des types porté en annexe,
+–	soit sa hauteur par rapport à son point de décollage ou à la position du télépilote correspondant au type 07 du 
+tableau des types porté en annexe.
+  d)	La position du point de décollage de l’aéronef sans personne à bord codée sur 8 octets, composée des champs 
+suivants :
+  i.	latitude codée sur 4 octets correspondant au type 08 du tableau des types porté en annexe ; l’information est 
+codée selon les méthodes de calcul indiquées en annexe ;
+  ii.	longitude codée sur 4 octets correspondant au type 09 du tableau des types porté en annexe ; l’information est 
+codée selon les méthodes de calcul indiquées en annexe.
+  e)	La vitesse sol horizontale codée sur 1 octet correspondant au type 10 du tableau des types porté en annexe ; en 
+mètres par seconde ;
+  f)	La route codée sur 2 octets correspondant au type 11 du tableau des types porté en annexe ; en degrés de 0o à 
+359o.
+  Art. 3. – Le trigramme constructeur mentionné à l’article 3 est attribué par le ministre en charge de l’aviation 
+civile qui en assure l’unicité. Il est obtenu par chaque constructeur au moyen du CERFA no 15963*01.
+  Art. 4. – Chaque constructeur s’assure de l’unicité de l’identifiant électronique de l’aéronef ou du dispositif de 
+signalement électronique ou numérique et le communique au propriétaire de l’aéronef circulant sans personne à 
+bord qui l’enregistre conformément aux dispositions de l’article R. 114-2 du code de l’aviation civile.
+CHAPITRE 2
+DISPOSITIONS RELATIVES AU DISPOSITIF DE SIGNALEMENT LUMINEUX
+  Art. 5. – Le dispositif de signalement lumineux mentionné à l’alinéa premier de l’article L. 34-9-2 et à 
+l’article R. 20-29-3 du code des postes et des communications électroniques respecte les spécifications suivantes :
+  1o L’utilisation des couleurs rouge et blanche est proscrite pour le signalement lumineux des aéronefs circulant 
+sans personne à bord ;
+  2o Le feu de signalement doit être visible de nuit par un observateur au sol, jusqu’à une hauteur de vol d’au 
+moins 150 mètres et dans un rayon au sol d’au moins 150 mètres par rapport à son aplomb.
+CHAPITRE 3
+DISPOSITIONS FINALES
+  Art. 6. – Les dispositions du présent arrêté sont applicables en Polynésie française, à Wallis-et-Futuna, et dans 
+les Terres australes et antarctiques françaises.
+Art. 7. – 1o Le présent arrêté entrera en vigueur 6 mois après sa publication.
+  2o Pour les aéronefs circulant sans personne à bord enregistrés en application de l’article L. 6111-1 du code des 
+transports avant la date d’entrée en vigueur mentionnée au 1o, les dispositions du présent arrêté n’entrent en vigueur 
+que 12 mois après sa publication.
+Art. 8. – Le présent arrêté sera publié au Journal officiel de la République française. 
+Fait le 27 décembre 2019.
+
+
+
+
+
+Le ministre de l’intérieur,
+CHRISTOPHE CASTANER
+
+
+
+Le secrétaire d’Etat
+auprès de la ministre de la transition écologique 
+et solidaire,
+chargé des transports,
+JEAN-BAPTISTE DJEBBARI
+
+
+La ministre de la transition écologique et 
+solidaire,
+ELISABETH BORNE
+
+
+
+La ministre des outre-mer,
+ANNICK GIRARDIN
+
+
+29 décembre 2019	JOURNAL  OFFICIEL  DE  LA  RÉPUBLIQUE  FRANÇAISE	Texte 39 sur 171
+
+      La secrétaire d’Etat 
+auprès du ministre de l’économie
+et des finances,
+AGNES PANNIER-RUNACHER
+
+ANNEXES
+ANNEXE I
+DÉFINITION DES GROUPES DE SIGNALEMENT ÉLECTRONIQUE
+
+Type d’aéronef 
+(enregistrement)
+
+Groupes de signalement électronique
+Aérostat captif
+
+
+
+1
+Aéromodèle de vol circulaire
+
+Aéromodèle de vol libre
+
+Montgolfière
+
+Planeur, aile volante (aéronef non motorisé)
+
+
+
+2
+Dirigeable
+
+Parachute, parapente
+
+Aéronef à ailes battantes
+
+Hélicoptère,
+
+
+
+
+3
+Multirotors
+
+Paramoteur
+
+Convertible / combiné
+
+Autogire
+
+Avion, aile, planeur (aéronef motorisé)
+4
+
+ANNEXE II
+DÉFINITION DES TYPES DE TLV
+Les types 0 à 200 sont réservés à l’usage exclusif de l’application du présent arrêté.
+
+TYPE
+DESCRIPTION
+TAILLE DU CHAMP EN OCTETS
+00
+Réservé à une utilisation postérieure
+
+01
+Version du protocole
+1
+02
+Identifiant FR sur 30 caractères
+30
+03
+Identifiant ANSI CTA 2063 UAS (numéro de série physique – PSN)
+Conforme à la norme visée
+04
+Latitude courante aéronef (signée)
+4
+05
+Longitude courante aéronef (signée)
+4
+06
+Altitude courante aéronef (signée)
+2
+07
+Hauteur courante aéronef (signée)
+2
+08
+Latitude point de décollage (signée)
+4
+09
+Longitude point de décollage (signée)
+4
+10
+Vitesse horizontale
+1
+11
+Route vraie
+2
+12(…)200
+Réservés à une utilisation postérieure
+
+
+
+29 décembre 2019	JOURNAL  OFFICIEL  DE  LA  RÉPUBLIQUE  FRANÇAISE	Texte 39 sur 171
+
+ANNEXE III
+PRINCIPES DE STRUCTURATION ET DE CALCUL
+Bloc « Vendor specific »
+Structure du bloc « vendor specific »
+La structure du bloc « Vendor Specific » permettant la surcharge des trames est indiquée ci-dessous :
+
+VS
+
+1 octet
+Taille
+
+1 octet
+OUI / CID
+
+3 octets
+VS Type
+
+1 octet
+Charge utile
+
+N octets
+0xDD
+(1)
+0x6A5C35
+0x01
+
+Où :
+–	VS : Vendor Specific, il est défini par la norme 802.11 et prend pour valeur 221 (0xDD),
+–	Taille : taille totale codée sur un octet des informations contenues dans les champs OUI, VS Type et Charge 
+utile,
+–	OUI / CID : Organizationally Unique Identifier ou Company ID, identifiant unique pour les organisations ou 
+les sociétés codé sur un octet ; dans le cadre de l’application du présent arrêté, la valeur à utiliser est 
+0x6A5C35
+–	VS Type : il s’agit ici du numéro de protocole utilisé pour la transmission d’information, dans le cadre de 
+l’application du présent arrêté, cette valeur est fixée à 0x01
+–	Charge utile : espace permettant de transmettre les informations nécessaires, elle est présentée ci-dessous. Par 
+définition, la longueur de cet espace ne peut pas excéder une taille de 251 octets (taille maximale - 4).
+Charge utile
+  La structure de la charge utile dépend du protocole (VS type) spécifié. Dans le cas du protocole de localisation 
+des UAS, la charge utile se compose de sous parties adoptant le format TLV (type – longueur – valeur). Ainsi, la 
+structure de la charge utile est de la forme suivante :
+
+
+T1
+
+L1
+Valeur1
+…
+…
+…
+
+Tn
+
+Ln
+Valeurn
+1 octet
+1 octet
+X octet(s)
+
+
+
+1 octet
+1 octet
+Y octet(s)
+Où :
+–	les types sont définis par l’arrêté
+–	les longueurs représentent les tailles en octets de leurs valeurs respectives
+–	les valeurs sont les données transmises.
+Méthodes de calcul :
+La signature des nombres
+Les nombres positifs sont transmis selon la méthode de calcul classique.
+Les informations négatives doivent être transmises selon la méthode du « complément à 2 » (inversion des bits
++ 1). Le bit de poids fort porte la valeur -2n (exemple : codage sur 8 bits --> -27).
+A titre d’exemple :
+
+Codage sur :
+Valeur (base 10)
+Valeur (base 2)
+Valeur (base 16)
+
+
+
+
+
+1 octet
+(de -128 à 127)
+-128
+1000 0000
+0x80
+
+-127
+1000 0001
+0x81
+
+-1
+1111 1111
+0xFF
+
+1
+0000 0001
+0x01
+
+127
+0111 1111
+0x7F
+
+128
+Ne peut pas être codé sur 1 octet
+
+
+
+2 octets
+(de -32768 à 32767)
+-128
+1111 1111 1000 0000
+0xFF 80
+
+-127
+1111 1111 1000 0001
+0xFF 81
+
+-1
+1111 1111 1111 1111
+0xFF FF
+
+1
+0000 0000 0000 0001
+0x00 01
+
+
+29 décembre 2019	JOURNAL  OFFICIEL  DE  LA  RÉPUBLIQUE  FRANÇAISE	Texte 39 sur 171
+
+Codage sur :
+Valeur (base 10)
+Valeur (base 2)
+Valeur (base 16)
+
+128
+0000 0000 1000 000
+0x00 80
+
+32767
+0111 1111 1111 1111
+0x7F FF
+Les coordonnées GPS
+  Les coordonnées GPS admettent une précision fixe à 5 décimales. Ainsi, la donnée à transmettre correspond à la 
+donnée fournie par le système multipliée par 105. Cette information est ensuite encodée sur 4 octets selon la 
+méthode précisée ci-avant.
+A titre d’exemple :
+
+Mesure
+Conversion
+Encodage
+48,15278
+4815278
+0x00 49 79 AE
+179,12345
+17912345
+0x01 11 52 19
+-179,12345
+-17912345
+0xFE EE AD E7
+-48,15278
+-4815278
+0xFF B6 86 52
+
