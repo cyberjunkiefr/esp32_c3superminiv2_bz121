@@ -1,6 +1,6 @@
 <!--#### Project -->
 ### Overview
-This project implements a French Law compliant UAV Wi-Fi Beacon (Remote ID) using an ESP32-C3 SuperMini. It utilizes a custom MicroPython module `esp_wifi_ext` for raw 802.11 frame injection. (read .\docs\arrete_dispositif.txt)
+This project implements a French Law compliant UAV Wi-Fi Beacon (Remote ID) using an ESP32-C3 SuperMini. It utilizes a custom MicroPython module `esp_wifi_ext` for raw 802.11 frame injection. (read .\docs\esp_wiki<-ext.md)
 
 ### Hardware Configuration
 - **Platform**: MicroPython v1.28 with `esp_wifi_ext`(.\docs\esp_wifi_ext.md)
@@ -60,6 +60,7 @@ On gpio pin 8 is a neopixel led (WS2812b) that should blink like this:
 | "NO satelites found"             | 500hz     | 50%       | blue     | black     |
 | "home position not determinated" | 1000hz    | 50%       | blue     | red       |
 | home_position_set = True         | 3000hz    | 25%       | green    | purple    |
+
 
 
 
